@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #444444;
+}
+
+body {
+  font-family: system-ui, -apple-system;
+  width: 100%;
+  background-color: #FEFAE0;
+}
+
+nav {
+  display: flex;
+  padding: 16px;
+  width: auto;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 2px solid #BC6C25;
+  /* 283618 --> Verde fuerte*/
+}
+
+#menu {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: 1px underline #444;
+}
+
+#container {
+  width: auto;
+  height: 450px;
+  margin: 4vh;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+article, aside {
+  width: 45%;
+  max-height: 350px;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  flex-direction: column;
+  gap: 16px;
+}
+
+#explore {
+  width: 10em;
+  margin-right: auto;
+  font-weight: 700;
+}
+
+#explore, #about {
+  border-radius: 6px;
+  background-color: #444444;
+  border: 1px solid #f6f6f6;
+  color: #f6f6f6;
+}
+
+#explore:hover, #about:hover {
+  background-color: #f6f6f6;
+  border: 1px solid #444;
+  color: #444;
+}
+
+#img-hero {
+  width: 60%;
+  height: auto;
+}
