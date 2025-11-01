@@ -36,6 +36,7 @@ footer {
   text-align: center;
   color: #444;
   border-top: 2px solid #EBEBEB;
+  gap: 8px;
 }
 
 #menu {
@@ -114,4 +115,10 @@ article {
 
 .social {
   width: 32px;
+}
+
+#personal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
