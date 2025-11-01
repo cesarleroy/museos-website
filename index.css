@@ -7,18 +7,35 @@
 body {
   font-family: system-ui, -apple-system;
   width: 100%;
-  background-color: #f6f6f6;
+  background-color: #fff;
+}
+
+nav, footer {
+  background-color: #F7F7F7;
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  /* 283618 --> Verde fuerte*/
+  /* BC6C25 --> Cáfe */
 }
 
 nav {
-  display: flex;
-  padding: 16px;
-  width: auto;
-  align-items: center;
-  justify-content: space-around;
   border-bottom: 2px solid #EBEBEB;
-  /* 283618 --> Verde fuerte*/
-  /* BC6C25 --> Cáfe */
+  width: auto;
+  justify-content: space-around;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  font-size: 12px;
+  flex-direction: column;
+  text-align: center;
+  color: #444;
+  border-top: 2px solid #EBEBEB;
 }
 
 #menu {
@@ -87,4 +104,14 @@ article {
 #img-hero {
   width: 60%;
   height: auto;
+}
+
+#social-media {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.social {
+  width: 32px;
 }
