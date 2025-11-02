@@ -7,6 +7,7 @@ footer {
   border-radius: 12px;
   padding: 12px;
   background-position: center;
+  width: 50%;
 }
 
 .museum-card * {
