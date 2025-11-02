@@ -1,0 +1,331 @@
+/* Estilos específicos para página de detalle de museo */
+footer {
+  position: inherit;
+  max-width: 100%;
+}
+
+/* Sección Hero del Museo */
+#museo-hero {
+  display: flex;
+  gap: 48px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+#galeria-principal {
+  flex: 1;
+  max-width: 450px;
+}
+
+#imagen-principal {
+  width: 100%;
+  height: 350px;
+  background-color: #f0f0f0;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+#imagen-principal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#miniaturas {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.miniatura {
+  width: 80px;
+  height: 80px;
+  background-color: #f0f0f0;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s;
+}
+
+.miniatura:hover,
+.miniatura.active {
+  border-color: #444;
+}
+
+.miniatura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#museo-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.reviews {
+  color: #888;
+  font-size: 14px;
+}
+
+#precio-modelos {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.precio {
+  font-size: 32px;
+  font-weight: bold;
+  color: #444;
+}
+
+#modelo-select {
+  padding: 10px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  color: #444;
+  font-family: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+#modelo-select:focus {
+  outline: none;
+  border-color: #444;
+}
+
+.descripcion {
+  line-height: 1.6;
+  color: #666;
+}
+
+.btn-como-llegar {
+  width: fit-content;
+  padding: 12px 32px;
+  background-color: #444;
+  color: #f6f6f6;
+  border-radius: 6px;
+  font-family: var(--title);
+  font-style: italic;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-como-llegar:hover {
+  background-color: #f6f6f6;
+  color: #444;
+  border: 1px solid #444;
+}
+
+/* Secciones Generales */
+.section-title {
+  font-family: var(--title);
+  font-size: 32px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #444;
+}
+
+/* Colecciones Destacadas */
+#colecciones {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.colecciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+}
+
+.coleccion-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.coleccion-imagen {
+  width: 100%;
+  height: 200px;
+  background-color: #f0f0f0;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coleccion-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coleccion-card h3 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #444;
+  text-transform: uppercase;
+}
+
+.coleccion-card p {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+/* Historia y Arquitectura */
+#historia {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.historia-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.historia-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  padding: 24px;
+  background-color: #fafafa;
+  border-radius: 8px;
+}
+
+.autor-info h3 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+.fecha {
+  font-size: 12px;
+  color: #999;
+}
+
+.texto {
+  line-height: 1.6;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Exposiciones Temporales */
+#exposiciones {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.descripcion-seccion {
+  text-align: center;
+  color: #666;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.exposiciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.exposicion-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.exposicion-imagen {
+  width: 100%;
+  height: 280px;
+  background-color: #f0f0f0;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exposicion-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exposicion-card h3 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #444;
+  text-transform: uppercase;
+}
+
+.exposicion-card p {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #museo-hero {
+    flex-direction: column;
+  }
+
+  #galeria-principal {
+    max-width: 100%;
+  }
+
+  .historia-item {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .colecciones-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .exposiciones-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}

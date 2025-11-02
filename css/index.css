@@ -5,30 +5,48 @@
 }
 
 body {
-  font-family: system-ui, -apple-system;
+  height: auto;
   width: 100%;
+  font-family: var(--text), -apple-system;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 nav, footer {
   background-color: #F7F7F7;
   display: flex;
-  padding: 16px;
   align-items: center;
   /* 283618 --> Verde fuerte*/
   /* BC6C25 --> Cáfe */
 }
 
 nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  padding: 4px 16px;
   border-bottom: 2px solid #EBEBEB;
-  width: auto;
   justify-content: space-around;
+}
+
+#brand {
+  font-family: var(--title), sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.title {
+  font-family: var(--title);
+  font-style: italic;
+  font-size: 38px;
 }
 
 footer {
   position: fixed;
   bottom: 0;
-  left: 0;
+  padding: 16px;
   width: 100%;
   height: auto;
   font-size: 12px;
@@ -65,12 +83,14 @@ a:hover {
 
 #container {
   width: auto;
-  height: 450px;
-  margin: 4vh;
+  height: auto;
+  min-height: 500px;
+  margin: 98px 0 16px 0;
   padding: 8px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  gap: 28px;
 }
 
 article, aside {
@@ -90,7 +110,6 @@ article {
 #explore {
   width: 10em;
   margin-right: auto;
-  font-weight: 700;
 }
 
 #explore, #about {
@@ -98,6 +117,10 @@ article {
   background-color: #444444;
   border: 1px solid #f6f6f6;
   color: #f6f6f6;
+  font-family: var(--title);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 #explore:hover, #about:hover {
@@ -126,4 +149,10 @@ article {
   flex-direction: column;
   align-items: center;
   gap: 2px;
+}
+
+#love {
+  font-family: var(--title);
+  font-style: italic;
+  font-weight: bold;
 }

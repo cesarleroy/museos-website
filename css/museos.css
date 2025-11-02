@@ -1,0 +1,79 @@
+footer {
+  position: inherit;
+  max-width: 100%;
+}
+
+.museum-card {
+  border-radius: 12px;
+  padding: 12px;
+  background-position: center;
+}
+
+.museum-card * {
+  color: var(--primary);
+}
+
+#louvre {
+  background-image:
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+      url('../museos/louvre/img/main-louvre-museo.jpg');
+}
+
+#met {
+  background-image:
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), 
+      url('../museos/met/img/main-metropolitano-museo.jpg');
+  background-position: center;
+}
+
+#britanico {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+    url('../museos/britanico/img/main-britanico-museo.jpg');
+}
+
+#vaticanos {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+    url('../museos/vaticanos/img/main-vaticanos-museo.jpg');
+  background-position: center;
+}
+
+#prado {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+    url('../museos/prado/img/main-prado-museo.jpg');
+}
+
+#hermitage {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+    url('../museos/hermitage/img/main-hermitage-museo.jpg');
+  background-position: center;
+}
+
+#moma {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+    url('../museos/moma/img/main-artemoderno-museo.jpg');
+}
+
+#galeria {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+    url('../museos/galeria/img/main-galerianacional-museo.jpg');
+  background-position: center;
+}
+
+#antropologia {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+    url('../museos/antropologia/img/main-antropologia-museo.jpg');
+}
+
+#orsay {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+    url('../museos/orsay/img/main-orsay-museo.jpg');
+  background-position: center;
+}

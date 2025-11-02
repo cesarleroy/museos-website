@@ -1,0 +1,12 @@
+/* variables globales */
+:root {
+  /* colores */
+  --background: #fff;
+  --primary: #f7f7fa;
+  --complementary: #444;
+  
+
+  /* tipografías */
+  --title: "Lobster Two", sans-serif;
+  --text: "Roboto Flex", monospace, sans-serif;
+}
