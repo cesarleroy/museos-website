@@ -1,0 +1,353 @@
+/* Estilos para página Visitar */
+
+/* Hero Section */
+#hero-visitar {
+  text-align: center;
+  padding: 48px 16px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+/* Secciones Generales */
+.seccion-contenido {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.section-title {
+  font-family: var(--title);
+  font-size: 32px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #444;
+}
+
+.descripcion-seccion {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+/* Consejos de Viaje */
+.consejos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.consejo-card {
+  background-color: #fafafa;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.consejo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.icono-consejo {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.consejo-card h3 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.consejo-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Entradas y Pases */
+.pases-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.pase-card {
+  background-color: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pase-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.pase-card.destacado {
+  border-color: #444;
+  background-color: #f9f9f9;
+}
+
+.pase-header {
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.pase-header h3 {
+  font-family: var(--title);
+  font-style: italic;
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.precio-pase {
+  font-size: 36px;
+  font-weight: bold;
+  color: #444;
+}
+
+.beneficios-lista {
+  list-style: none;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.beneficios-lista li {
+  padding: 8px 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.btn-comprar {
+  background-color: #444;
+  color: #f6f6f6;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-align: center;
+  font-family: var(--title);
+  font-style: italic;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: block;
+}
+
+.btn-comprar:hover {
+  background-color: #f6f6f6;
+  color: #444;
+  border: 1px solid #444;
+}
+
+/* Mapas Interactivos */
+.mapas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.mapa-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mapa-imagen {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background-color: #f0f0f0;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.mapa-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.overlay-mapa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.mapa-imagen:hover .overlay-mapa {
+  opacity: 1;
+}
+
+.mapa-imagen:hover img {
+  transform: scale(1.05);
+}
+
+.btn-ver-mapa {
+  background-color: #f6f6f6;
+  color: #444;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-family: var(--title);
+  font-style: italic;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.mapa-card h3 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #444;
+}
+
+.mapa-card p {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Tours Virtuales */
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.tour-card {
+  background-color: #fafafa;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tour-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tour-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #e0e0e0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.tour-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.tour-card:hover .tour-thumbnail img {
+  transform: scale(1.05);
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  background-color: rgba(68, 68, 68, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  padding-left: 4px;
+}
+
+.tour-info {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tour-info h3 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #444;
+}
+
+.duracion {
+  font-size: 14px;
+  color: #888;
+}
+
+.tour-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.btn-tour {
+  background-color: #444;
+  color: #f6f6f6;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s;
+  margin-top: 8px;
+}
+
+.btn-tour:hover {
+  background-color: #f6f6f6;
+  color: #444;
+  border: 1px solid #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .consejos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pases-container {
+    grid-template-columns: 1fr;
+  }
+
+  .mapas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tours-grid {
+    grid-template-columns: 1fr;
+  }
+}

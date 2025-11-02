@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,8 +11,10 @@
     />
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/visitar.css" />
     <title>Visitar</title>
   </head>
+
   <body>
     <nav>
       <a href="/">
@@ -24,22 +26,248 @@
         <a href="../explorar/">Explorar</a>
         <a href="./">Visitar</a>
         <a href="../blog/">Blog</a>
-        <a id="about" href="../about/">Acerca de</a>
+        <a href="../about/" id="about">Acerca de</a>
       </div>
     </nav>
 
-    <div id="container">
-      <article>
+    <div
+      id="container"
+      style="flex-direction: column; gap: 48px; margin-bottom: 180px"
+    >
+      <!-- Hero Section -->
+      <section id="hero-visitar">
         <h1 class="title">Planifica tu Visita</h1>
-        <ul>
-          <li><a href="./consejos/">Consejos de Viaje</a></li>
-          <li><a href="./entradas/">Entradas y Pases</a></li>
-          <li><a href="./mapa/">Mapa Interactivo</a></li>
-          <li><a href="./tours/">Tours Virtuales</a></li>
-        </ul>
-      </article>
+        <p class="subtitle">
+          Todo lo que necesitas saber para disfrutar al máximo tu experiencia en
+          los museos
+        </p>
+      </section>
 
-      <aside></aside>
+      <!-- Consejos de Viaje -->
+      <section id="consejos-viaje" class="seccion-contenido">
+        <h2 class="section-title">Consejos de Viaje</h2>
+        <div class="consejos-grid">
+          <div class="consejo-card">
+            <div class="icono-consejo">🎒</div>
+            <h3>Prepara tu Equipaje</h3>
+            <p>
+              Lleva solo lo esencial. Muchos museos no permiten mochilas
+              grandes. Usa bolsas pequeñas o riñoneras.
+            </p>
+          </div>
+          <div class="consejo-card">
+            <div class="icono-consejo">⏰</div>
+            <h3>Llega Temprano</h3>
+            <p>
+              Visita los museos en horarios de apertura para evitar multitudes y
+              disfrutar mejor las exhibiciones.
+            </p>
+          </div>
+          <div class="consejo-card">
+            <div class="icono-consejo">🎫</div>
+            <h3>Compra Entradas Online</h3>
+            <p>
+              Reserva tus boletos con anticipación para evitar filas y asegurar
+              tu entrada en días concurridos.
+            </p>
+          </div>
+          <div class="consejo-card">
+            <div class="icono-consejo">👟</div>
+            <h3>Usa Calzado Cómodo</h3>
+            <p>
+              Caminarás mucho. Elige zapatos cómodos que te permitan recorrer
+              las galerías sin cansarte.
+            </p>
+          </div>
+          <div class="consejo-card">
+            <div class="icono-consejo">📱</div>
+            <h3>Descarga Audioguías</h3>
+            <p>
+              Muchos museos ofrecen apps móviles con tours guiados. Descárgalas
+              antes de tu visita.
+            </p>
+          </div>
+          <div class="consejo-card">
+            <div class="icono-consejo">💧</div>
+            <h3>Mantente Hidratado</h3>
+            <p>
+              Lleva una botella de agua reutilizable. Algunos museos tienen
+              fuentes para rellenar.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Entradas y Pases -->
+      <section id="entradas-pases" class="seccion-contenido">
+        <h2 class="section-title">Entradas y Pases</h2>
+        <div class="pases-container">
+          <div class="pase-card destacado">
+            <div class="pase-header">
+              <h3>Pase Anual</h3>
+              <p class="precio-pase">$299.00</p>
+            </div>
+            <ul class="beneficios-lista">
+              <li>✓ Acceso ilimitado todo el año</li>
+              <li>✓ Entrada prioritaria sin filas</li>
+              <li>✓ 20% descuento en tienda</li>
+              <li>✓ Acceso a eventos exclusivos</li>
+              <li>✓ Invitaciones especiales</li>
+            </ul>
+            <a href="#" class="btn-comprar">Comprar Ahora</a>
+          </div>
+
+          <div class="pase-card">
+            <div class="pase-header">
+              <h3>Entrada General</h3>
+              <p class="precio-pase">$25.00</p>
+            </div>
+            <ul class="beneficios-lista">
+              <li>✓ Acceso por 1 día</li>
+              <li>✓ Todas las exhibiciones permanentes</li>
+              <li>✓ Audioguía incluida</li>
+              <li>✓ Válido para 1 persona</li>
+            </ul>
+            <a href="#" class="btn-comprar">Comprar Ahora</a>
+          </div>
+
+          <div class="pase-card">
+            <div class="pase-header">
+              <h3>Entrada Estudiante</h3>
+              <p class="precio-pase">$15.00</p>
+            </div>
+            <ul class="beneficios-lista">
+              <li>✓ Acceso por 1 día</li>
+              <li>✓ Requiere credencial vigente</li>
+              <li>✓ Audioguía incluida</li>
+              <li>✓ 10% descuento en tienda</li>
+            </ul>
+            <a href="#" class="btn-comprar">Comprar Ahora</a>
+          </div>
+
+          <div class="pase-card">
+            <div class="pase-header">
+              <h3>Entrada Familiar</h3>
+              <p class="precio-pase">$60.00</p>
+            </div>
+            <ul class="beneficios-lista">
+              <li>✓ 2 adultos + 2 niños</li>
+              <li>✓ Válido por 1 día</li>
+              <li>✓ Actividades infantiles incluidas</li>
+              <li>✓ Kit educativo de regalo</li>
+            </ul>
+            <a href="#" class="btn-comprar">Comprar Ahora</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mapas Interactivos -->
+      <section id="mapas" class="seccion-contenido">
+        <h2 class="section-title">Mapa Interactivo</h2>
+        <div style="width: 100%">
+          <div
+            style="
+              position: relative;
+              padding-bottom: 56.25%;
+              padding-top: 0;
+              height: 0;
+            "
+          >
+            <iframe
+              title="MUSEOS"
+              frameborder="0"
+              width="1200px"
+              height="675px"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+              src="https://view.genially.com/69055f0416d49ff461c00f2d"
+              type="text/html"
+              allowscriptaccess="always"
+              allowfullscreen="true"
+              scrolling="yes"
+              allownetworking="all"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tours Virtuales -->
+      <section id="tours-virtuales" class="seccion-contenido">
+        <h2 class="section-title">Tours Virtuales</h2>
+        <p class="descripcion-seccion">
+          Explora los museos desde la comodidad de tu hogar
+        </p>
+
+        <div class="tours-grid">
+          <div class="tour-card">
+            <div class="tour-thumbnail">
+              <img src="../assets/tour-placeholder.jpg" alt="Tour Virtual 1" />
+              <div class="play-overlay">▶</div>
+            </div>
+            <div class="tour-info">
+              <h3>Recorrido Completo - Louvre</h3>
+              <p class="duracion">⏱ 45 minutos</p>
+              <p>
+                Explora las salas más emblemáticas del museo más visitado del
+                mundo.
+              </p>
+              <a href="#" class="btn-tour">Iniciar Tour</a>
+            </div>
+          </div>
+
+          <div class="tour-card">
+            <div class="tour-thumbnail">
+              <img src="../assets/tour-placeholder.jpg" alt="Tour Virtual 2" />
+              <div class="play-overlay">▶</div>
+            </div>
+            <div class="tour-info">
+              <h3>Arte Moderno - MoMA</h3>
+              <p class="duracion">⏱ 30 minutos</p>
+              <p>
+                Descubre las obras maestras del arte contemporáneo del siglo XX.
+              </p>
+              <a href="#" class="btn-tour">Iniciar Tour</a>
+            </div>
+          </div>
+
+          <div class="tour-card">
+            <div class="tour-thumbnail">
+              <img src="../assets/tour-placeholder.jpg" alt="Tour Virtual 3" />
+              <div class="play-overlay">▶</div>
+            </div>
+            <div class="tour-info">
+              <h3>Tesoros del Británico</h3>
+              <p class="duracion">⏱ 50 minutos</p>
+              <p>
+                Un viaje a través de la historia de la humanidad con piezas
+                únicas.
+              </p>
+              <a href="#" class="btn-tour">Iniciar Tour</a>
+            </div>
+          </div>
+
+          <div class="tour-card">
+            <div class="tour-thumbnail">
+              <img src="../assets/tour-placeholder.jpg" alt="Tour Virtual 4" />
+              <div class="play-overlay">▶</div>
+            </div>
+            <div class="tour-info">
+              <h3>Culturas Prehispánicas</h3>
+              <p class="duracion">⏱ 40 minutos</p>
+              <p>
+                Explora las civilizaciones antiguas de México en el Museo de
+                Antropología.
+              </p>
+              <a href="#" class="btn-tour">Iniciar Tour</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
     <footer>

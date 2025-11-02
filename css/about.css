@@ -1,0 +1,248 @@
+/* Estilos para página Acerca de */
+
+/* Hero Section */
+#hero-about {
+  text-align: center;
+  padding: 48px 16px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+/* Secciones Generales */
+.seccion-contenido {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.section-title {
+  font-family: var(--title);
+  font-size: 32px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #444;
+}
+
+/* Quiénes Somos */
+.quienes-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 48px;
+  margin-bottom: 48px;
+  align-items: center;
+}
+
+.quienes-imagen {
+  width: 100%;
+  height: 400px;
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.quienes-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quienes-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.texto-principal {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.quienes-texto p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* Valores */
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.valor-card {
+  background-color: #fafafa;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.valor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.icono-valor {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.valor-card h3 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.valor-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Contacto - Nuevo diseño según mockup */
+.contacto-form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contacto-form {
+  background-color: #e8e8e8;
+  padding: 48px 32px;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 90%;
+  padding: 14px 16px;
+  border: 3px solid #4a7ba7;
+  border-radius: 0;
+  font-family: var(--text);
+  font-size: 14px;
+  color: #999;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #bbb;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2d5577;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+  border: 2px solid #333;
+}
+
+.btn-enviar {
+  width: 100%;
+  padding: 16px 24px;
+  background-color: #3d3d3d;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-family: var(--text);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 8px;
+}
+
+.btn-enviar:hover {
+  background-color: #2d2d2d;
+}
+
+/* Aviso de Privacidad - Nuevo diseño según mockup */
+.aviso-privacidad-card {
+  background-color: #fff;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.aviso-title {
+  font-family: var(--text);
+  font-size: 36px;
+  font-weight: 400;
+  color: #444;
+  margin-bottom: 8px;
+  padding: 0;
+  text-align: left;
+}
+
+.fecha-aviso {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.aviso-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.aviso-contenido p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .quienes-container {
+    grid-template-columns: 1fr;
+  }
+
+  .quienes-imagen {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .valores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-form {
+    padding: 32px 24px;
+  }
+
+  .aviso-title {
+    font-size: 28px;
+  }
+}

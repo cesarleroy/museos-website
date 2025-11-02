@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;1,400;1,700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/blog.css" />
+    <title>Blog</title>
+  </head>
+
+  <body>
+    <nav>
+      <a href="/">
+        <h3 id="brand">Yis</h3>
+      </a>
+
+      <div id="menu">
+        <a href="../museos/">Museos</a>
+        <a href="../explorar/">Explorar</a>
+        <a href="../visitar/">Visitar</a>
+        <a href="./">Blog</a>
+        <a href="../about/" id="about">Acerca de</a>
+      </div>
+    </nav>
+
+    <div
+      id="container"
+      style="flex-direction: column; gap: 48px; margin-bottom: 180px"
+    >
+      <!-- Hero Section -->
+      <section id="hero-blog">
+        <h1 class="title">Blog Cultural</h1>
+        <p class="subtitle">
+          Artículos, reportajes y las últimas noticias del mundo del arte
+        </p>
+      </section>
+
+      <!-- Artículos y Reportajes -->
+      <section id="articulos" class="seccion-contenido">
+        <h2 class="section-title">Artículos y Reportajes</h2>
+
+        <div class="articulos-container">
+          <!-- Artículo Destacado -->
+          <article class="articulo-destacado">
+            <div class="articulo-imagen">
+              <img
+                src="../assets/articulo-placeholder.jpg"
+                alt="Artículo Destacado"
+              />
+              <span class="categoria-tag destacado">Destacado</span>
+            </div>
+            <div class="articulo-contenido">
+              <div class="meta-info">
+                <span class="fecha">📅 25 de Octubre, 2024</span>
+                <span class="autor">✍️ María Rodríguez</span>
+                <span class="lectura">⏱ 8 min lectura</span>
+              </div>
+              <h3>El Arte Renacentista y su Influencia en la Modernidad</h3>
+              <p>
+                Exploramos cómo las técnicas y filosofías del Renacimiento
+                continúan inspirando a artistas contemporáneos. Un recorrido por
+                las obras maestras que cambiaron la historia del arte para
+                siempre.
+              </p>
+              <a href="#" class="btn-leer-mas">Leer Completo</a>
+            </div>
+          </article>
+
+          <!-- Grid de Artículos -->
+          <div class="articulos-grid">
+            <article class="articulo-card">
+              <div class="articulo-imagen-small">
+                <img
+                  src="../assets/articulo-placeholder.jpg"
+                  alt="Artículo 1"
+                />
+                <span class="categoria-tag">Historia</span>
+              </div>
+              <div class="articulo-info">
+                <div class="meta-info-small">
+                  <span class="fecha">20 Oct 2024</span>
+                  <span class="lectura">5 min</span>
+                </div>
+                <h4>Los Museos Más Antiguos del Mundo</h4>
+                <p>
+                  Descubre las instituciones culturales que han preservado la
+                  historia durante siglos.
+                </p>
+                <a href="#" class="link-articulo">Leer más →</a>
+              </div>
+            </article>
+
+            <article class="articulo-card">
+              <div class="articulo-imagen-small">
+                <img
+                  src="../assets/articulo-placeholder.jpg"
+                  alt="Artículo 2"
+                />
+                <span class="categoria-tag">Cultura</span>
+              </div>
+              <div class="articulo-info">
+                <div class="meta-info-small">
+                  <span class="fecha">18 Oct 2024</span>
+                  <span class="lectura">6 min</span>
+                </div>
+                <h4>Guía de Fotografía en Museos</h4>
+                <p>
+                  Consejos para capturar las mejores imágenes respetando las
+                  normas de cada museo.
+                </p>
+                <a href="#" class="link-articulo">Leer más →</a>
+              </div>
+            </article>
+
+            <article class="articulo-card">
+              <div class="articulo-imagen-small">
+                <img
+                  src="../assets/articulo-placeholder.jpg"
+                  alt="Artículo 3"
+                />
+                <span class="categoria-tag">Arte</span>
+              </div>
+              <div class="articulo-info">
+                <div class="meta-info-small">
+                  <span class="fecha">15 Oct 2024</span>
+                  <span class="lectura">7 min</span>
+                </div>
+                <h4>El Impresionismo: Revolución Visual</h4>
+                <p>
+                  Cómo un movimiento artístico transformó la manera de ver y
+                  representar el mundo.
+                </p>
+                <a href="#" class="link-articulo">Leer más →</a>
+              </div>
+            </article>
+
+            <article class="articulo-card">
+              <div class="articulo-imagen-small">
+                <img
+                  src="../assets/articulo-placeholder.jpg"
+                  alt="Artículo 4"
+                />
+                <span class="categoria-tag">Reportaje</span>
+              </div>
+              <div class="articulo-info">
+                <div class="meta-info-small">
+                  <span class="fecha">12 Oct 2024</span>
+                  <span class="lectura">10 min</span>
+                </div>
+                <h4>Detrás de Escena: Conservación de Arte</h4>
+                <p>
+                  El trabajo invisible que mantiene vivas las obras maestras
+                  para futuras generaciones.
+                </p>
+                <a href="#" class="link-articulo">Leer más →</a>
+              </div>
+            </article>
+
+            <article class="articulo-card">
+              <div class="articulo-imagen-small">
+                <img
+                  src="../assets/articulo-placeholder.jpg"
+                  alt="Artículo 5"
+                />
+                <span class="categoria-tag">Entrevista</span>
+              </div>
+              <div class="articulo-info">
+                <div class="meta-info-small">
+                  <span class="fecha">10 Oct 2024</span>
+                  <span class="lectura">4 min</span>
+                </div>
+                <h4>Conversando con Curadores</h4>
+                <p>
+                  Entrevista exclusiva con los expertos que diseñan las
+                  exhibiciones más importantes.
+                </p>
+                <a href="#" class="link-articulo">Leer más →</a>
+              </div>
+            </article>
+
+            <article class="articulo-card">
+              <div class="articulo-imagen-small">
+                <img
+                  src="../assets/articulo-placeholder.jpg"
+                  alt="Artículo 6"
+                />
+                <span class="categoria-tag">Historia</span>
+              </div>
+              <div class="articulo-info">
+                <div class="meta-info-small">
+                  <span class="fecha">8 Oct 2024</span>
+                  <span class="lectura">5 min</span>
+                </div>
+                <h4>Arte y Política en el Siglo XX</h4>
+                <p>
+                  Cómo los eventos históricos moldearon las expresiones
+                  artísticas contemporáneas.
+                </p>
+                <a href="#" class="link-articulo">Leer más →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Anuncios y Eventos -->
+      <section id="eventos" class="seccion-contenido">
+        <h2 class="section-title">Anuncios y Eventos</h2>
+        <p class="descripcion-seccion">
+          Próximos eventos culturales y actividades especiales
+        </p>
+
+        <div class="eventos-grid">
+          <div class="evento-card">
+            <div class="evento-fecha">
+              <span class="dia">15</span>
+              <span class="mes">NOV</span>
+            </div>
+            <div class="evento-info">
+              <h3>Noche de Museos 2024</h3>
+              <p class="evento-lugar">📍 Múltiples Sedes</p>
+              <p class="evento-hora">⏰ 18:00 - 23:00</p>
+              <p class="evento-desc">
+                Una noche especial con entrada gratuita a los principales museos
+                de la ciudad.
+              </p>
+              <a href="#" class="btn-evento">Más Información</a>
+            </div>
+          </div>
+
+          <div class="evento-card">
+            <div class="evento-fecha">
+              <span class="dia">22</span>
+              <span class="mes">NOV</span>
+            </div>
+            <div class="evento-info">
+              <h3>Taller: Introducción al Arte Moderno</h3>
+              <p class="evento-lugar">📍 Museo de Arte Moderno</p>
+              <p class="evento-hora">⏰ 10:00 - 14:00</p>
+              <p class="evento-desc">
+                Aprende sobre las corrientes artísticas del siglo XX con
+                expertos.
+              </p>
+              <a href="#" class="btn-evento">Más Información</a>
+            </div>
+          </div>
+
+          <div class="evento-card">
+            <div class="evento-fecha">
+              <span class="dia">1</span>
+              <span class="mes">DIC</span>
+            </div>
+            <div class="evento-info">
+              <h3>Conferencia: Digitalización de Colecciones</h3>
+              <p class="evento-lugar">📍 Museo Nacional</p>
+              <p class="evento-hora">⏰ 16:00 - 18:00</p>
+              <p class="evento-desc">
+                El futuro de los museos: preservación digital y accesibilidad
+                global.
+              </p>
+              <a href="#" class="btn-evento">Más Información</a>
+            </div>
+          </div>
+
+          <div class="evento-card">
+            <div class="evento-fecha">
+              <span class="dia">10</span>
+              <span class="mes">DIC</span>
+            </div>
+            <div class="evento-info">
+              <h3>Exposición: Maestros del Impresionismo</h3>
+              <p class="evento-lugar">📍 Galería Nacional</p>
+              <p class="evento-hora">⏰ Inauguración 19:00</p>
+              <p class="evento-desc">
+                Colección especial con obras de Monet, Renoir y Degas.
+              </p>
+              <a href="#" class="btn-evento">Más Información</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Guías de Viaje Cultural -->
+      <section id="guias-viaje" class="seccion-contenido">
+        <h2 class="section-title">Guías de Viaje Cultural</h2>
+
+        <div class="guias-grid">
+          <div class="guia-card">
+            <div class="guia-imagen">
+              <img src="../assets/guia-placeholder.jpg" alt="Guía París" />
+            </div>
+            <div class="guia-contenido">
+              <h3>París: Capital del Arte</h3>
+              <p class="guia-subtitulo">10 Museos Imperdibles</p>
+              <ul class="guia-highlights">
+                <li>🎨 Louvre y Orsay</li>
+                <li>🗿 Rodin y Picasso</li>
+                <li>🏛️ Centro Pompidou</li>
+              </ul>
+              <a href="#" class="btn-descargar">Descargar Guía PDF</a>
+            </div>
+          </div>
+
+          <div class="guia-card">
+            <div class="guia-imagen">
+              <img src="../assets/guia-placeholder.jpg" alt="Guía Nueva York" />
+            </div>
+            <div class="guia-contenido">
+              <h3>Nueva York: Arte & Cultura</h3>
+              <p class="guia-subtitulo">Ruta de 5 Días</p>
+              <ul class="guia-highlights">
+                <li>🗽 Met y MoMA</li>
+                <li>🎭 Guggenheim</li>
+                <li>📚 Museos de Brooklyn</li>
+              </ul>
+              <a href="#" class="btn-descargar">Descargar Guía PDF</a>
+            </div>
+          </div>
+
+          <div class="guia-card">
+            <div class="guia-imagen">
+              <img src="../assets/guia-placeholder.jpg" alt="Guía Londres" />
+            </div>
+            <div class="guia-contenido">
+              <h3>Londres: Historia Viva</h3>
+              <p class="guia-subtitulo">Circuito Completo</p>
+              <ul class="guia-highlights">
+                <li>👑 British Museum</li>
+                <li>🖼️ National Gallery</li>
+                <li>🎨 Tate Modern</li>
+              </ul>
+              <a href="#" class="btn-descargar">Descargar Guía PDF</a>
+            </div>
+          </div>
+
+          <div class="guia-card">
+            <div class="guia-imagen">
+              <img src="../assets/guia-placeholder.jpg" alt="Guía México" />
+            </div>
+            <div class="guia-contenido">
+              <h3>México: Cultura Milenaria</h3>
+              <p class="guia-subtitulo">Tesoros Prehispánicos</p>
+              <ul class="guia-highlights">
+                <li>🗿 Antropología</li>
+                <li>🎨 Bellas Artes</li>
+                <li>🏛️ Templo Mayor</li>
+              </ul>
+              <a href="#" class="btn-descargar">Descargar Guía PDF</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div id="social-media">
+        <a href="https://www.facebook.com/yi.mtnez" target="_blank">
+          <img class="social" src="../assets/icons/facebook.svg" />
+        </a>
+        <a href="https://www.instagram.com/_soo_yi" target="_blank">
+          <img class="social" src="../assets/icons/instagram.svg" />
+        </a>
+        <a href="https://github.com/soo-yi" target="_blank">
+          <img class="social" src="../assets/icons/github.svg" />
+        </a>
+        <a href="mailto:milencruz65@gmail.com" target="_blank">
+          <img class="social" src="../assets/icons/email.svg" />
+        </a>
+      </div>
+      <div id="personal-info">
+        <a id="address" href="https://maps.app.goo.gl/zQsLZNa9SrPLxJsAA">
+          <p>Av. Té 950, Granjas México, Iztacalco, 08400, CDMX, México</p>
+        </a>
+        <p id="legal">
+          &copy; 2025 Yissel Cruz. Todos los derechos reservados.
+        </p>
+        <p id="love">Hecho con ♡</p>
+      </div>
+    </footer>
+  </body>
+</html>
