@@ -19,7 +19,9 @@
         <h3 id="brand">Yis</h3>
       </a>
 
-      <div id="menu">
+      <button id="menu-toggle" class="menu-toggle">☰</button>
+
+      <div id="menu" class="menu">
         <a href="./museos/">Museos</a>
         <a href="./explorar/">Explorar</a>
         <a href="./visitar/">Visitar</a>
@@ -38,10 +40,80 @@
         <a href="./museos/" id="explore">¡Exploralos!</a>
       </article>
 
+      <!-- Carrusel -->
       <aside>
-        <img id="img-hero" src="./assets/waa.png" />
+        <div id="carousel">
+          <div class="carousel-container">
+            <img
+              class="carousel-slide"
+              src="./assets/img/museo1.jpg"
+              alt="Museo 1"
+            />
+            <img
+              class="carousel-slide"
+              src="./assets/img/museo2.jpg"
+              alt="Museo 2"
+            />
+            <img
+              class="carousel-slide"
+              src="./assets/img/museo3.jpg"
+              alt="Museo 3"
+            />
+            <img
+              class="carousel-slide"
+              src="./assets/img/museo4.jpg"
+              alt="Museo 4"
+            />
+            <img
+              class="carousel-slide"
+              src="./assets/img/museo5.jpg"
+              alt="Museo 5"
+            />
+            <img
+              class="carousel-slide"
+              src="./assets/img/museo6.jpg"
+              alt="Museo 6"
+            />
+            <img
+              class="carousel-slide"
+              src="./assets/img/museo7.jpg"
+              alt="Museo 7"
+            />
+            <img
+              class="carousel-slide"
+              src="./assets/img/museo8.jpg"
+              alt="Museo 8"
+            />
+            <img
+              class="carousel-slide"
+              src="./assets/img/museo9.jpg"
+              alt="Museo 9"
+            />
+            <img
+              class="carousel-slide"
+              src="./assets/img/museo10.jpg"
+              alt="Museo 10"
+            />
+          </div>
+          <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
+          <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
+          <div class="carousel-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+          </div>
+        </div>
       </aside>
     </div>
+
+    <script src="./js/carousel.js"></script>
 
     <footer>
       <div id="social-media">
@@ -69,4 +141,64 @@
       </div>
     </footer>
   </body>
+  <script>
+    let currentSlideIndex = 0;
+    let autoSlideTimer;
+
+    function changeSlide(n) {
+      showSlide((currentSlideIndex += n));
+      resetAutoSlide();
+    }
+
+    function currentSlide(n) {
+      showSlide((currentSlideIndex = n));
+      resetAutoSlide();
+    }
+
+    function showSlide(n) {
+      const slides = document.querySelectorAll(".carousel-slide");
+      const dots = document.querySelectorAll(".dot");
+
+      if (n >= slides.length) {
+        currentSlideIndex = 0;
+      }
+      if (n < 0) {
+        currentSlideIndex = slides.length - 1;
+      }
+
+      slides.forEach((slide) => slide.classList.remove("active"));
+      dots.forEach((dot) => dot.classList.remove("active"));
+
+      slides[currentSlideIndex].classList.add("active");
+      dots[currentSlideIndex].classList.add("active");
+    }
+
+    function autoSlide() {
+      showSlide(++currentSlideIndex);
+    }
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideTimer);
+      autoSlideTimer = setInterval(autoSlide, 2500);
+    }
+
+    // Mostrar primer slide al cargar
+    showSlide(0);
+    // Iniciar carrusel automático
+    autoSlideTimer = setInterval(autoSlide, 2500);
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("active");
+      });
+    });
+  </script>
 </html>
