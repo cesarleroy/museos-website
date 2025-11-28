@@ -111,50 +111,55 @@
         <h2 class="section-title">Contáctanos</h2>
 
         <div class="contacto-form-wrapper">
-          <form class="contacto-form">
+          <form id="contacto-form" class="contacto-form" action="../server/contact.php" method="POST">
             <div class="form-group">
+              <label for="nombre">Nombre</label>
               <input
                 type="text"
                 id="nombre"
                 name="nombre"
-                placeholder="Nombre (text input)"
+                placeholder="Juan Pérez"
                 required
               />
             </div>
 
             <div class="form-group">
+              <label for="email">Email</label>
               <input
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Email  (email input)"
+                placeholder="example@gmail.com"
                 required
               />
             </div>
 
             <div class="form-group">
+              <label for="asunto">Asunto</label>
               <input
                 type="text"
                 id="asunto"
                 name="asunto"
-                placeholder="Asunto  (text input)"
+                placeholder="ej. Museo de Louvre"
                 required
               />
             </div>
-
+            <label for="mensaje">Mensaje</label>
             <div class="form-group">
               <textarea
                 id="mensaje"
                 name="mensaje"
                 rows="6"
-                placeholder="Mensaje (Cuerpo)  (text area)"
+                placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 required
               ></textarea>
             </div>
 
             <button type="submit" class="btn-enviar">
-              ENVIAR (BUTTON SUBMIT)
+              ENVIAR
             </button>
+            <div id="form-status" aria-live="polite" style="margin-top:12px;color:#0a0;">
+            </div>
           </form>
         </div>
       </section>
@@ -217,5 +222,42 @@
         <p id="love">Hecho con ♡</p>
       </div>
     </footer>
+    <script>
+      (function () {
+        function qs(sel, ctx) { return (ctx || document).querySelector(sel); }
+        var form = qs('#contacto-form');
+        if (!form) return;
+        var status = qs('#form-status');
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var submitBtn = form.querySelector('button[type="submit"]');
+          if (submitBtn) submitBtn.disabled = true;
+          if (status) { status.style.color = '#0066cc'; status.textContent = 'Enviando...'; }
+
+          var formData = new FormData(form);
+
+          fetch(form.action || '../server/contact.php', {
+            method: form.method || 'POST',
+            body: formData,
+            credentials: 'same-origin'
+          }).then(function (res) {
+            if (res.ok) {
+              return res.text().then(function () {
+                if (status) { status.style.color = '#0a0'; status.textContent = 'Mensaje enviado. Gracias.'; }
+                form.reset();
+              });
+            }
+            return res.text().then(function (txt) {
+              throw new Error((txt && txt.length < 200) ? txt : ('Error: ' + res.status));
+            });
+          }).catch(function (err) {
+            if (status) { status.style.color = '#a00'; status.textContent = 'Error al enviar: ' + err.message; }
+          }).finally(function () {
+            if (submitBtn) submitBtn.disabled = false;
+            setTimeout(function () { if (status) status.textContent = ''; }, 6000);
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
