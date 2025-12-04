@@ -16,8 +16,7 @@ nav, footer {
   background-color: #F7F7F7;
   display: flex;
   align-items: center;
-  /* 283618 --> Verde fuerte*/
-  /* BC6C25 --> Cáfe */
+  z-index: 999;
 }
 
 nav {
@@ -44,7 +43,7 @@ nav {
 }
 
 footer {
-  position: fixed;
+  position: inherit;
   bottom: 0;
   padding: 16px;
   width: 100%;
