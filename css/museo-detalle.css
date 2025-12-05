@@ -21,7 +21,7 @@ footer {
 
 #imagen-principal {
   width: 100%;
-  height: 350px;
+  height: 100%;
   background-color: #f0f0f0;
   border: 2px solid #e0e0e0;
   border-radius: 8px;
@@ -29,7 +29,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
 }
 
 #imagen-principal img {
@@ -227,7 +226,13 @@ footer {
   gap: 24px;
   padding: 24px;
   background-color: #fafafa;
+  border: 1px solid #e5dfdf;
   border-radius: 8px;
+}
+
+.historia-item:hover {
+  background-color: #e5dfdf;
+  cursor: text;
 }
 
 .autor-info h3 {
