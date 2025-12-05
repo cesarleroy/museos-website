@@ -13,6 +13,8 @@
   display: flex;
   flex-direction: column;
   gap: 48px;
+  margin: auto;
+  padding: 14px 0;
 }
 
 /* Artículo Destacado */
@@ -25,6 +27,7 @@
   border-radius: 12px;
   overflow: hidden;
   transition: box-shadow 0.3s;
+  width: 100%;
 }
 
 .articulo-destacado:hover {
@@ -125,6 +128,7 @@
 }
 
 .articulo-card {
+  width: 100%;
   background-color: #fff;
   border: 2px solid #e0e0e0;
   border-radius: 12px;
@@ -197,7 +201,14 @@
 }
 
 /* Anuncios y Eventos */
+#eventos {
+  width: 60%;
+}
+
 .eventos-grid {
+  width: 80%;
+  padding: 16px 0;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
@@ -289,8 +300,15 @@
 }
 
 /* Guías de Viaje */
+#guias-viaje {
+  width: 60%;
+}
+
+
 .guias-grid {
   display: grid;
+  margin: auto;
+  padding: 14px 0;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
 }

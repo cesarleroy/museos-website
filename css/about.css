@@ -1,20 +1,3 @@
-/* Estilos para página Acerca de */
-
-/* Hero Section */
-
-@import "compass/css3";
-
-@import "compass/reset";
-@import "compass/css3";
-
-/* Colors */  
-/* ---------------------------------------- */ 
-$border:     #c6c6c6;
-$border-focus: #9FB1C1;
-$brand-color:  #1b3d4d;
-$booking-green: #bdcc00;
-$asphalt:     #506982;
-
 #hero-about {
   text-align: center;
   padding: 48px 16px 24px;
@@ -127,7 +110,6 @@ $asphalt:     #506982;
   color: #666;
 }
 
-/* Contacto - Nuevo diseño según mockup */
 .contacto-form-wrapper {
   max-width: 600px;
   margin: 0 auto;
@@ -135,7 +117,7 @@ $asphalt:     #506982;
 
 .contacto-form {
   background-color: #e8e8e8;
-  padding: 48px 32px;
+  padding: 32px 32px 0 32px;
   border-radius: 0;
   display: flex;
   flex-direction: column;
@@ -144,29 +126,34 @@ $asphalt:     #506982;
 
 .form-group {
   display: flex;
+  gap: 4px;
   flex-direction: column;
 }
 
 .form-group input,
-.form-group textarea {
-  width: 90%;
+.form-group textarea ,
+.form-group select,
+.form-group option {
+  width: auto;
   padding: 14px 16px;
   border: 3px solid #4a7ba7;
   border-radius: 0;
   font-family: var(--text);
   font-size: 14px;
-  color: #999;
+  color: #212529;
   background-color: #fff;
   transition: border-color 0.3s;
 }
 
 .form-group input::placeholder,
-.form-group textarea::placeholder {
+.form-group textarea::placeholder,
+.form-group select::placeholder {
   color: #bbb;
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus{
   outline: none;
   border-color: #2d5577;
 }
@@ -174,12 +161,12 @@ $asphalt:     #506982;
 .form-group textarea {
   resize: vertical;
   min-height: 140px;
-  border: 2px solid #333;
 }
 
 .btn-enviar {
   width: 100%;
   padding: 16px 24px;
+  margin: 8px 0 2px 0;
   background-color: #3d3d3d;
   color: #fff;
   border: none;
@@ -190,7 +177,6 @@ $asphalt:     #506982;
   letter-spacing: 0.5px;
   cursor: pointer;
   transition: all 0.3s;
-  margin-top: 8px;
 }
 
 .btn-enviar:hover {

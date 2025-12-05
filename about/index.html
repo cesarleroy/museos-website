@@ -17,7 +17,7 @@
 
   <body>
     <nav>
-      <a href="/">
+      <a href="../">
         <h3 id="brand">Yis</h3>
       </a>
 
@@ -111,7 +111,12 @@
         <h2 class="section-title">Contáctanos</h2>
 
         <div class="contacto-form-wrapper">
-          <form id="contacto-form" class="contacto-form" action="../server/contact.php" method="POST">
+          <form
+            id="contacto-form"
+            class="contacto-form"
+            action="../server/contact.php"
+            method="POST"
+          >
             <div class="form-group">
               <label for="nombre">Nombre</label>
               <input
@@ -119,6 +124,42 @@
                 id="nombre"
                 name="nombre"
                 placeholder="Juan Pérez"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="edad">Edad</label>
+              <input
+                type="number"
+                id="edad"
+                name="edad"
+                min="1"
+                max="120"
+                step="1"
+                placeholder="21"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="nacionalidad">Nacionalidad</label>
+              <select id="nacionalidad" name="nacionalidad" required>
+                <option value="mexicana" selected>Mexicana</option>
+                <option value="extranjera">Extranjera</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="5512345678"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                title="Ingresa 10 dígitos sin espacios"
                 required
               />
             </div>
@@ -140,26 +181,28 @@
                 type="text"
                 id="asunto"
                 name="asunto"
-                placeholder="ej. Museo de Louvre"
+                placeholder="ej. Consulta sobre servicios"
                 required
               />
             </div>
-            <label for="mensaje">Mensaje</label>
+
             <div class="form-group">
+              <label for="mensaje">Mensaje</label>
               <textarea
                 id="mensaje"
                 name="mensaje"
                 rows="6"
-                placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                placeholder="Escribe tu mensaje aquí..."
                 required
               ></textarea>
             </div>
 
-            <button type="submit" class="btn-enviar">
-              ENVIAR
-            </button>
-            <div id="form-status" aria-live="polite" style="margin-top:12px;color:#0a0;">
-            </div>
+            <button type="submit" class="btn-enviar">ENVIAR</button>
+            <div
+              id="form-status"
+              aria-live="polite"
+              style="margin-top: 12px; color: #0a0"
+            ></div>
           </form>
         </div>
       </section>
@@ -221,41 +264,60 @@
         </p>
         <p id="love">Hecho con ♡</p>
       </div>
+      <a href="../server/login.php" class="admin-link"
+        >Ingresar como administrador</a
+      >
     </footer>
     <script>
       (function () {
-        function qs(sel, ctx) { return (ctx || document).querySelector(sel); }
-        var form = qs('#contacto-form');
+        function qs(sel, ctx) {
+          return (ctx || document).querySelector(sel);
+        }
+        var form = qs("#contacto-form");
         if (!form) return;
-        var status = qs('#form-status');
-        form.addEventListener('submit', function (e) {
+        var status = qs("#form-status");
+        form.addEventListener("submit", function (e) {
           e.preventDefault();
           var submitBtn = form.querySelector('button[type="submit"]');
           if (submitBtn) submitBtn.disabled = true;
-          if (status) { status.style.color = '#0066cc'; status.textContent = 'Enviando...'; }
+          if (status) {
+            status.style.color = "#0066cc";
+            status.textContent = "Enviando...";
+          }
 
           var formData = new FormData(form);
 
-          fetch(form.action || '../server/contact.php', {
-            method: form.method || 'POST',
+          fetch(form.action || "../server/contact.php", {
+            method: form.method || "POST",
             body: formData,
-            credentials: 'same-origin'
-          }).then(function (res) {
-            if (res.ok) {
-              return res.text().then(function () {
-                if (status) { status.style.color = '#0a0'; status.textContent = 'Mensaje enviado. Gracias.'; }
-                form.reset();
+            credentials: "same-origin",
+          })
+            .then(function (res) {
+              return res.text().then(function (txt) {
+                if (res.ok) {
+                  if (status) {
+                    status.style.color = "#0a0";
+                    status.textContent = "Mensaje enviado. Gracias.";
+                  }
+                  form.reset();
+                } else {
+                  throw new Error(txt);
+                }
               });
-            }
-            return res.text().then(function (txt) {
-              throw new Error((txt && txt.length < 200) ? txt : ('Error: ' + res.status));
+            })
+            .catch(function (err) {
+              console.error("Error:", err);
+              if (status) {
+                status.style.color = "#a00";
+                status.textContent = "Error: " + err.message;
+              }
+            })
+            .finally(function () {
+              if (submitBtn) submitBtn.disabled = false;
+              setTimeout(function () {
+                if (status) status.textContent = "";
+              }, 6000);
             });
-          }).catch(function (err) {
-            if (status) { status.style.color = '#a00'; status.textContent = 'Error al enviar: ' + err.message; }
-          }).finally(function () {
-            if (submitBtn) submitBtn.disabled = false;
-            setTimeout(function () { if (status) status.textContent = ''; }, 6000);
-          });
         });
       })();
     </script>
